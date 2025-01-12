@@ -1,0 +1,19 @@
+{
+    "test1": {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "firstName": "Praveen",
+      "lastName": "Kumar",
+      "postalCode": "574242"
+    },
+    "test2": {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "firstName": "Praveen",
+      "lastName": "Kumar",
+      "postalCode": "574242",
+      "productName":"Bike Light"
+    }
+
+}
+  
