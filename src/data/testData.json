@@ -13,6 +13,13 @@
       "lastName": "Kumar",
       "postalCode": "574242",
       "productName":"Bike Light"
+    },
+    "test3": {
+      "name": "janet",
+      "data": {
+        "name": "Praveen",
+        "job": "kennth"
+    }
     }
 
 }

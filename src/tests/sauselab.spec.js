@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 import { SauselabLoginPage } from '../pages/sauselab/sauselabLogin';
 import { SauselabHomePage } from '../pages/sauselab/sauselabHome';
 import { DataFetch } from '../utils/datafetch';
-const getTestData = new DataFetch();
+const getTestData = new DataFetch('testData');
 
 test('sauselab page test with all product', async ({ page }) => {
     const values=getTestData.getJsonArray('test1');

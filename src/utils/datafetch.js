@@ -2,8 +2,8 @@
 const fs = require('fs');
 
 export class DataFetch {
-    constructor() {
-        this.filePath = './src/data/testData.json'; // Hardcoded file path
+    constructor(filename) {
+        this.filePath = './src/data/'+filename+'.json'; // Hardcoded file path
         this.cachedData = null;
     }
 
@@ -12,7 +12,7 @@ export class DataFetch {
         try {
             const rawData = fs.readFileSync(this.filePath, 'utf-8');
             this.cachedData = JSON.parse(rawData);
-            console.log("Data loaded successfully:", this.cachedData); // Log to check if data is loaded correctly
+            console.log("Data loaded successfully:"); // Log to check if data is loaded correctly
         } catch (error) {
             console.error("Error loading the file or parsing JSON:", error);
         }
@@ -23,7 +23,8 @@ export class DataFetch {
         if (!this.cachedData) {
             this.loadData(); // Ensure data is loaded before accessing
         }
-        console.log("Fetching data for key:", key); // Log to check which key is being fetched
+        
+        console.log("Fetching data for key:", this.cachedData[key]); // Log to check which key is being fetched
         return this.cachedData[key]; // Return the specific test data
     }
 }
